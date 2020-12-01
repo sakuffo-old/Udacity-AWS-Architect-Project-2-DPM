@@ -1,0 +1,113 @@
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary,,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),,Amazon Virtual Private Cloud (VPC),0,83.7,1004.4,USD,Number of NAT Gateways (2),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Standard,0,471.04,5652.48,USD,S3 Standard storage (20 TB per month),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Standard - Infrequent Access,0,384,4608,USD,S3 Infrequent Access storage (30 TB per month),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Storage Management,0,0,0,USD,,,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",Data Transfer,0,184.23,2210.76,USD,"DT Inbound: Internet (5 TB per month) 
+, DT Outbound: Internet (2 TB per month) 
+, DT Outbound: Amazon Cloud Front (3 TB per month) 
+",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Database for customer data, meta-data for social media objects, application data",Amazon RDS for MySQL,58990,2857.118,93275.42,USD,"Quantity (2), Pricing strategy (Standard Reserved Instances 3 Year Partial Upfront), Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (2 TB), Instance type (db.m5.8xlarge), Additional backup storage (2 TB)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"A1 instances to handle frontend web traffic for 50,000 users",Amazon EC2,0,864.6,10375.2,USD,"Operating system (Linux), Quantity (40), Pricing strategy (On-Demand Instances 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (30 GB), Instance type (a1.medium)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Instances to handle Application/Backend layer. Items like processing posts, dealing with uploads, etc",Amazon EC2,1467.3,172.28,3534.66,USD,"Operating system (Linux), Quantity (5), Pricing strategy (Compute Savings Plans 1 Year Partial Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (m5.large)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Elastic Load Balancer to load balance front end traffic, back end traffic to App/Backend, and read traffic from databases (read replicas)",Elastic Load Balancing,0,1200.85,14410.2,USD,Number of Application Load Balancers (2),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),R53 for DNS resolution,Amazon Route 53,0,183,2196,USD,"Hosted Zones (1), Number of Elastic Network Interfaces (2)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),Read-Replica for RDS,Amazon RDS for MySQL,14628,1925.66,37735.92,USD,"Quantity (2), Pricing strategy (Standard Reserved Instances 1 Year Partial Upfront), Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (2 TB), Instance type (db.m5.8xlarge), Additional backup storage (2 TB)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),Secondary VPC  R53 for DNS resolution,Amazon Route 53,0,732,8784,USD,"Hosted Zones (4), Number of Elastic Network Interfaces (8)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"Secondary VPC  Elastic Load Balancer to load balance front end traffic, back end traffic to App/Backend, and read traffic from databases (read replicas)",Elastic Load Balancing,0,1200.85,14410.2,USD,Number of Application Load Balancers (2),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (Ohio),"Secondary VPC Instances to handle Application/Backend layer. Items like processing posts, dealing with uploads, etc",Amazon EC2,0,618.3,7419.6,USD,"Operating system (Linux), Quantity (10), Pricing strategy (Compute Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (m5.large)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"Secondary VPC A1 instances to handle frontend web traffic for 50,000 users",Amazon EC2,0,1962.56,23550.72,USD,"Operating system (Linux), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (20 GB), Snapshot Frequency (No snapshot storage), DT Inbound: Internet (0 TB per month) 
+, DT Outbound: Amazon Cloud Front (1 TB per month) 
+, DT Intra-Region: (1 TB per month) 
+, Workload (Daily, (Workload days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Baseline: 40, Peak: 80, Duration of peak: 12 Hr 0 Min)), Advance EC2 instance (a1.large), Pricing strategy (Compute Savings Plans 1 Year  None upfront)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),Monitoring for issue detection in Secondary VPC,Amazon CloudWatch,0,548.728,6584.74,USD,,,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),Additional VPC with Nat Gateway in a different region,Amazon Virtual Private Cloud (VPC),0,41.85,502.2,USD,Number of NAT Gateways (1),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),Monitoring for issue detection in Primary VPC,Amazon CloudWatch,0,548.728,6584.74,USD,,,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Standard,0,471.04,5652.48,USD,S3 Standard storage (20 TB per month),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Standard - Infrequent Access,0,384,4608,USD,S3 Infrequent Access storage (30 TB per month),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Storage Management,0,0,0,USD,,,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",Data Transfer,0,184.23,2210.76,USD,"DT Inbound: Internet (5 TB per month) 
+, DT Outbound: Internet (2 TB per month) 
+, DT Outbound: Amazon Cloud Front (3 TB per month) 
+",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),Secondary VPC Caching Server to improve performance of the app,Amazon ElastiCache,0,99.28,1191.36,USD,( 2 instances of type Redis  Standard  cache t3.medium  OnDemand ),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),Primary VPC Caching Server to improve performance of the app,Amazon ElastiCache,0,99.28,1191.36,USD,( 2 instances of type Redis  Standard  cache t3.medium  OnDemand ),,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Notification Service to notify for both Internal notifications (infrastructure failures) and user notification (account sign up, email notification)",Amazon Simple Notification Service (SNS),0,113.67,1364.04,USD,"DT Inbound: Internet (0 TB per month) 
+, DT Outbound: Internet (1 TB per month) 
+, Requests (1 million per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"Notification Service to notify for both Internal notifications (infrastructure failures) and user notification (account sign up, email notification)",Amazon Simple Notification Service (SNS),0,113.67,1364.04,USD,"DT Inbound: Internet (0 TB per month) 
+, DT Outbound: Internet (1 TB per month) 
+, Requests (1 million per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),Cloud formation to assist with scaling and ensuring infrastructure is configured correctly,AWS CloudFormation,0,272.85,3274.2,USD,"Number of third-party resources managed (100), Average duration per operation (30 seconds), Total number of operations per resource (100 per day)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),Cloud formation to assist with scaling and ensuring infrastructure is configured correctly,AWS CloudFormation,0,272.85,3274.2,USD,"Number of third-party resources managed (100), Average duration per operation (30 seconds), Total number of operations per resource (100 per day)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),KMS as more IaC is used,AWS Key Management Service,0,11,132,USD,"Number of customer managed Customer Master Keys (CMK) (5), Number of symmetric requests (2000000)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),KMS as more IaC is used,AWS Key Management Service,0,11,132,USD,"Number of customer managed Customer Master Keys (CMK) (5), Number of symmetric requests (2000000)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),SQS to assist with the uploading and posting on information to make sure they don't get lost,Amazon Simple Queue Service (SQS),0,18.41,220.92,USD,"DT Inbound: Internet (0 TB per month) 
+, DT Outbound: Internet (200 GB per month) 
+, Data transfer cost (17.91), Standard queue requests ( million per month), FIFO queue requests (1 million per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),SQS to assist with the uploading and posting on information to make sure they don't get lost,Amazon Simple Queue Service (SQS),0,18.41,220.92,USD,"DT Inbound: Internet (0 TB per month) 
+, DT Outbound: Internet (200 GB per month) 
+, Data transfer cost (17.91), Standard queue requests ( million per month), FIFO queue requests (1 million per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"As more IaC is used, CloudTrail can follow and monitor API calls",AWS CloudTrail,0,2,24,USD,"Management events units (millions), Write management trails (1), Read management trails (1), Data events units (millions), S3 trails (1), Lambda trails (1), Insight events units (millions), Trails with Insight events (1), S3 operations (2 per month), Write management events (1 per month), Read management events (1 per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),"As more IaC is used, CloudTrail can follow and monitor API calls",AWS CloudTrail,0,2,24,USD,"Management events units (millions), Write management trails (1), Read management trails (1), Data events units (millions), S3 trails (1), Lambda trails (1), Insight events units (millions), Trails with Insight events (1), S3 operations (2 per month), Write management events (1 per month), Read management events (1 per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),WAF to protect the Web tier,AWS Web Application Firewall (WAF),0,100.6,1207.2,USD,"Number of Web Access Control Lists (Web ACLs) utilized (10 per month), Number of Rules added per Web ACL (50 per month), Number of Rule Groups per Web ACL ( per month), Number of Rules inside each Rule Group ( per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),WAF to protect the Web tier,AWS Web Application Firewall (WAF),0,100.6,1207.2,USD,"Number of Web Access Control Lists (Web ACLs) utilized (10 per month), Number of Rules added per Web ACL (50 per month), Number of Rule Groups per Web ACL ( per month), Number of Rules inside each Rule Group ( per month)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),AWS Systems Manager to pair with Cloud Formation/Cloud Watch/Cloud Trail for automation and monitoring,OpsCenter,0,658.97,7907.64,USD,"Frequency of OpsItems (operational work items) (300 per hour), Frequency of Get, Describe, Update, and GetOpsSummary API requests (300 per hour)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),AWS Systems Manager to pair with Cloud Formation/Cloud Watch/Cloud Trail for automation and monitoring,AWS AppConfig,0,165.47,1985.64,USD,"Targets (50), Application configurations (10), Frequency of GetConfiguration API requests (10 per minute), Frequency of configurations received (10 per day)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US West (Oregon),AWS Systems Manager to pair with Cloud Formation/Cloud Watch/Cloud Trail for automation and monitoring,Automation,0,0,0,USD,"Average size of playbook attachments (100 MB), Frequency of steps ( per day), aws:executeScript steps ()",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),AWS Systems Manager to pair with Cloud Formation/Cloud Watch/Cloud Trail for automation and monitoring,OpsCenter,0,658.97,7907.64,USD,"Frequency of OpsItems (operational work items) (300 per hour), Frequency of Get, Describe, Update, and GetOpsSummary API requests (300 per hour)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),AWS Systems Manager to pair with Cloud Formation/Cloud Watch/Cloud Trail for automation and monitoring,AWS AppConfig,0,165.47,1985.64,USD,"Targets (50), Application configurations (10), Frequency of GetConfiguration API requests (10 per minute), Frequency of configurations received (10 per day)",,,,,,,,,
+Increased_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),AWS Systems Manager to pair with Cloud Formation/Cloud Watch/Cloud Trail for automation and monitoring,Automation,0,0,0,USD,"Average size of playbook attachments (100 MB), Frequency of steps ( per day), aws:executeScript steps ()",,,,,,,,,
+Global,All,Business support plan,AWS Support,5555.97,1553.23 First month including upfront and monthly fee 6549.43,23634.96,USD,"Supports 24/7 phone, chat, and email access to Cloud Support Engineers for unlimited contacts, with and a response time of less than 1 hour.",,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Rationale for Changes,,,,,,,,,,,,,,,,,
+"The Fundamental assumption here is that an increase to 20K a month the app either secured funding or the business is doing well. 
+So all changes here are about ensuring that the infrastructure of the app is scalable and does not become a roadblock without necessarily having to rearchitect or re-code the app right now.  So there are a few themes.
+A second VPC was introduced in a different region to protect against region failure. All layers of the app were duplicated (in the case of  EC2) or replicated (in the case of RDS with read replicas) to guard against this failure type. Moving to a different data architecture was considered but it would require some architecture on the app we were not prepared to do.
+Further, the web tier was put into an autoscaling group. Since the initial configuration already and an elastic load balancer this was not an issue, this allows the app to scale to meet demand. 
+The number of Elastic IPs and DNS zones were increased to provide resiliency for networking and load balancer connections as well as DNS services.
+
+For performance  EBS volumes were changed on the RDS database to provisioned IOPs to ensure that it would have the best performance possible from the database. On top of that, Elasticcache was introduced to improve the performance of the front end. With both the database being faster and having cache front some of the requests (as many views and components of the web tier are read-only).
+  Cloud front was fully introduced to improve performance close to the end-user. 
+
+As this scaling starts to go up, managing it can be complex so rather than provisioning all of the resources by hand Cloud Formation was used to enable declarative state-based management of the app's infrastructure through Infrastructure as Code (IaC). Terraform was considered, however, to get the app done fast Cloud Formation was select. This does introduce some AWS dependency and will have to be re-examined at the next app re-factor.
+
+AWS Systems manager was introduced to make sure the app did not require by hand configuration on all EC2 instances by hand, further along, the IaC path.
+SQS was introduced to help with file uploads to improve the user experience while ensuring minimal failures from the internet to the app.
+WAFs were introduced to increase the security resilience of the Web tier. KMS was introduced to better improve key management
+
+Everything was done with the intention of setting the groundwork for a robust application that would not have to introduce too many changes as it scaled.
+
+",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Acknowledgement,,,,,,,,,,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,,,,,,,,,

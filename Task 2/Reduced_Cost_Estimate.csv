@@ -1,0 +1,43 @@
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary,
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),,Amazon Virtual Private Cloud (VPC),0,83.7,1004.4,USD,Number of NAT Gateways (2),
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Standard,0,471.04,5652.48,USD,S3 Standard storage (20 TB per month),
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",S3 Standard - Infrequent Access,0,384,4608,USD,S3 Infrequent Access storage (30 TB per month),
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"S3 Storage for social media Items, large file uploads, database dumps outside of the regular backup",Data Transfer,0,460.71,5528.52,USD,"DT Inbound: Internet (5 TB per month) 
+, DT Outbound: Internet (5 TB per month) 
+",
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Database for customer data, meta-data for social media objects, application data",Amazon RDS for MySQL,58990,2857.118,93275.42,USD,"Quantity (2), Pricing strategy (Standard Reserved Instances 3 Year Partial Upfront), Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (2 TB), Instance type (db.m5.8xlarge), Additional backup storage (2 TB)",
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"A1 instances to handle frontend web traffic for 50,000 users",Amazon EC2,0,864.6,10375.2,USD,"Operating system (Linux), Quantity (40), Pricing strategy (On-Demand Instances 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (30 GB), Instance type (a1.medium)",
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Instances to handle Application/Backend layer. Items like processing posts, dealing with uploads, etc",Amazon EC2,1467.3,172.28,3534.66,USD,"Operating system (Linux), Quantity (5), Pricing strategy (Compute Savings Plans 1 Year Partial Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (m5.large)",
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Elastic Load Balancer to load balance front end traffic, back end traffic to App/Backend, and read traffic from databases (read replicas)",Elastic Load Balancing,0,1200.85,14410.2,USD,Number of Application Load Balancers (2),
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),R53 for DNS resolution,Amazon Route 53,0,183,2196,USD,"Hosted Zones (1), Number of Elastic Network Interfaces (2)",
+Reduced_Cost_Estimate - Stephen Akuffo,US West (Oregon),Read-Replica for Primary RDS,Amazon RDS for MySQL,14628,1884.627,37243.52,USD,"Quantity (1), Pricing strategy (Standard Reserved Instances 1 Year Partial Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (2 TB), Instance type (db.m5.8xlarge), Additional backup storage (2 TB)",
+Reduced_Cost_Estimate - Stephen Akuffo,US West (Oregon),R53 for DNS resolution,Amazon Route 53,0,183,2196,USD,"Hosted Zones (1), Number of Elastic Network Interfaces (2)",
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Elastic Load Balancer to load balance front end traffic, back end traffic to App/Backend, and read traffic from databases (read replicas)",Elastic Load Balancing,0,1200.85,14410.2,USD,Number of Application Load Balancers (2),
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"Instances to handle Application/Backend layer. Items like processing posts, dealing with uploads, etc",Amazon EC2,1467.3,172.28,3534.66,USD,"Operating system (Linux), Quantity (5), Pricing strategy (Compute Savings Plans 1 Year Partial Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (m5.large)",
+Reduced_Cost_Estimate - Stephen Akuffo,US East (N. Virginia),"A1 instances to handle frontend web traffic for 50,000 users",Amazon EC2,0,864.6,10375.2,USD,"Operating system (Linux), Quantity (40), Pricing strategy (On-Demand Instances 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (30 GB), Instance type (a1.medium)",
+Reduced_Cost_Estimate - Stephen Akuffo,US West (Oregon),,Amazon CloudWatch,0,548.728,6584.74,USD,,
+Global,All,Business support plan,AWS Support,0,0,0,USD,"Supports 24/7 phone, chat, and email access to Cloud Support Engineers for unlimited contacts, with and a response time of less than 1 hour.",
+,,,,,,,,,
+Rationale for Changes,,,,,,,,,
+"The changes were targeted towards making smart service use changes that could lower costs while not degrading performance. For example with the S3 Changes - Moved from all Standard S3 to 30 TB on Infrequently accessed. Infrequently accessed and not glacier because for a social media site that will have pictures and other user content, it taking a slightly longer time to retrieve the item is okay but hours is not. This is why Intelligent tiering is also not used as items could end up in glacier-like performance. 
+Further, initially, the app was sized with all on-demand instances. However, to save costs, the parts of the app that are most likely to be long lasting, like the Database, as that will be required for regulations and rules, and the application server was changed.
+The Database was put with a partial upfront reserved instance
+The App servers, however, were put into a compute savings plan. The compute savings plan allows the instance size and type to be changed in the future and it also allows for serverless service Fargate to be used as it is part of the plan. So if the app succeeds and we develop the skillset to go full serverless we are not bound by the EC2 instances. 
+
+Ultimately these changes allow us to trade some CAPEX to save on OPEX, while also changing the services to allow for a lower cost without degraded performance.",,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Acknowledgement,,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,

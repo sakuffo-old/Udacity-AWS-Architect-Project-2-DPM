@@ -1,0 +1,7 @@
+Reduced Cost Rational
+The changes were targeted towards making smart service use changes that could lower costs while not degrading performance. For example with the S3 Changes - Moved from all Standard S3 to 30 TB on Infrequently accessed. Infrequently accessed and not glacier because for a social media site that will have pictures and other user content, it taking a slightly longer time to retrieve the item is okay but hours is not. This is why Intelligent tiering is also not used as items could end up in glacier-like performance.
+Further, initially, the app was sized with all on-demand instances. However, to save costs, the parts of the app that are most likely to be long lasting, like the Database, as that will be required for regulations and rules, and the application server was changed.
+The Database was put with a partial upfront reserved instance
+The App servers, however, were put into a compute savings plan. The compute savings plan allows the instance size and type to be changed in the future and it also allows for serverless service Fargate to be used as it is part of the plan. So if the app succeeds and we develop the skillset to go full serverless we are not bound by the EC2 instances. 
+
+Ultimately these changes allow us to trade some CAPEX to save on OPEX, while also changing the services to allow for a lower cost without degraded performance.

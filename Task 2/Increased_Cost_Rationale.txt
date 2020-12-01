@@ -1,0 +1,25 @@
+- Increased Cost Rational
+The Fundamental assumption here is that an increase to 20K a month the app either secured funding or the business is doing well. 
+
+So all changes here are about ensuring that the infrastructure of the app is scalable and does not become a roadblock without necessarily having to rearchitect or re-code the app right now.  So there are a few themes.
+
+A second VPC was introduced in a different region to protect against region failure. All layers of the app were duplicated (in the case of  EC2) or replicated (in the case of RDS with read replicas) to guard against this failure type. Moving to a different data architecture was considered but it would require some architecture on the app we were not prepared to do.
+
+Further, the web tier was put into an autoscaling group. Since the initial configuration already and an elastic load balancer this was not an issue, this allows the app to scale to meet demand. 
+The number of Elastic IPs and DNS zones were increased to provide resiliency for networking and load balancer connections as well as DNS services.
+
+For **performance**  EBS volumes were changed on the RDS database to provisioned IOPs to ensure that it would have the best performance possible from the database. On top of that, Elasticcache was introduced to improve the performance of the front end. With both the database being faster and having cache front some of the requests (as many views and components of the web tier are read-only).
+
+  
+Cloud front was fully introduced to improve performance close to the end-user. 
+
+As this scaling starts to go up, managing it can be complex so rather than provisioning all of the resources by hand Cloud Formation was used to enable declarative state-based management of the app's infrastructure through Infrastructure as Code (IaC). Terraform was considered, however, to get the app done fast Cloud Formation was select. This does introduce some AWS dependency and will have to be re-examined at the next app re-factor.
+
+AWS Systems manager was introduced to make sure the app did not require by hand configuration on all EC2 instances by hand, further along, the IaC path.
+
+SQS was introduced to help with file uploads to improve the user experience while ensuring minimal failures from the internet to the app.
+
+WAFs were introduced to increase the security resilience of the Web tier. KMS was introduced to better improve key management
+
+Everything was done with the intention of setting the groundwork for a robust application that would not have to introduce too many changes as it scaled.
+
